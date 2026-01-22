@@ -1,0 +1,28 @@
+# Ignore everything
+*
+!.gitignore
+
+# Folders / Formats used for code
+
+!gradle/
+!gradle/**/*
+
+!pictures/
+!pictures/**/*
+
+!vendordeps/
+!vendordeps/**/*
+
+!src/
+!src/**/*
+
+# Files reauired by gradle
+!build.gradle
+!gradlew
+!gradlew.bat
+!settings.gradle
+
+# Github Files
+!README.md
+
+# Files used for JitPack CI
