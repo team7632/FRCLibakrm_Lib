@@ -50,12 +50,9 @@ public class PhotoCamera {
 
     }
 
-    public Pair<Pose2d, Double> aprilTagProcess(double multi_LIMIT, double single_LIMIT) {
+    public AprilTagResult aprilTagProcess(double multi_LIMIT, double single_LIMIT) {
 
         PhotonPipelineResult result = this.camera.getLatestResult();
-        
-
-     
 
         double TimestampSeconds = result.getTimestampSeconds();
         boolean useMutitag = true;
@@ -112,16 +109,26 @@ public class PhotoCamera {
 
         if (Update) {
             Pose3d updatePose = robotPose.get();
-            useGyro = true;
-       
+
+            if (DriverStation.isAutonomous()) {
+                if (!Constants.AutoAngleUseCamera) {
+                    useGyro = true;
+                }
+            } else {
+                if (!Constants.TeleAngleUseCamera) {
+                    useGyro = true;
+                }
+            }
+
             if (!useMutitag || useGyro) {
                 updatePose = new Pose3d(robotPose.get().getTranslation(),
                         new Rotation3d());
             }
 
-            this.pose2d = new Pose2d(updatePose.getX(), updatePose.getY(),new Rotation2d(updatePose.getRotation().getZ()));
+            this.pose2d = new Pose2d(updatePose.getX(), updatePose.getY(),
+                    new Rotation2d(updatePose.getRotation().getZ()));
         }
-        return Pair.of(this.pose2d, TimestampSeconds);
+        return new AprilTagResult(pose2d, TimestampSeconds, Update);
     }
 
 }
