@@ -28,7 +28,7 @@ Make sure your `plugins` block includes GradleRIO:
 ```groovy
 plugins {
     id "java"
-    id "edu.wpi.first.GradleRIO" version "2026.1.01"
+    id "edu.wpi.first.GradleRIO" version "2026.1.1"
 }
 ```
 Step 1. Add the JitPack repository to your `build.gradle`
@@ -47,6 +47,6 @@ allprojects {
 ```groovy
 dependencies {
     // check tag above for most recent version
-   implementation 'com.github.team7632:FRCLibakrm_Lib:aklib'
+   implementation 'com.github.team7632:FRCLibakrm_Lib:v2026.1.01'
 }
 ```
