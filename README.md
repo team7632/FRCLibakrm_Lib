@@ -1,4 +1,5 @@
 [![AkLib Logo](https://github.com/team7632/FRCLibakrm_Lib/blob/main/picture/254167164.png)](https://github.com/team7632/FRCLibakrm_Lib/blob/main/picture/254167164.png)
+[![FRC Team 7632](https://img.shields.io/badge/FRC-7632Event-0055FF)](https://frc-events.firstinspires.org/team/7632)
 [![JitPack Version](https://jitpack.io/v/team7632/FRCLibakrm_Lib.svg)](https://jitpack.io/#team7632/FRCLibakrm_Lib)  
 [![Instagram](https://img.shields.io/badge/Instagram-FRC%207632-E4405F?logo=instagram&logoColor=purple)](https://www.instagram.com/frc_team_7632/)
 [![Facebook](https://img.shields.io/badge/Facebook-FRC%207632-1877F2?logo=facebook&logoColor=blue)](https://www.facebook.com/FRCTeam7632)
