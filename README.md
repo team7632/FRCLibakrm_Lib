@@ -44,6 +44,6 @@ allprojects {
 ```groovy
 dependencies {
     // check tag above for most recent version
-    compile 'com.github.StuyPulse:StuyLib:VERSION'
+   implementation 'com.github.team7632:FRCLibakrm_Lib:aklib'
 }
 ```
